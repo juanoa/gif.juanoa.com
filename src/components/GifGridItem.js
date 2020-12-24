@@ -4,9 +4,15 @@ import PropTypes from 'prop-types'
 export const GifGridItem = ({title, url}) => {
 
     return (
-        <div className="card animate__animated animate__fadeIn">
-            <img src={url} alt={title} />
-            <p>{title}</p>
+        <div className="col">
+            <div className="card shadow-sm card animate__animated animate__fadeIn">
+                <div className="card-body">
+                    <img src={url} alt={title} className={'gif'} />
+                </div>
+                <div className="card-footer">
+                    <p>{title}</p>
+                </div>
+            </div>
         </div>
     )
 }

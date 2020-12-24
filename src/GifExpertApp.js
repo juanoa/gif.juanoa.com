@@ -4,7 +4,7 @@ import {GifGrid} from "./components/GifGrid";
 
 export const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['Hello World']);
+    const [categories, setCategories] = useState([]);
 
     // const handleApp = () => {
     //     setCategories([...categories, 'HunterXHunter']);
@@ -12,13 +12,11 @@ export const GifExpertApp = () => {
 
     return (
         <>
-            <h2>GifExpertApp</h2>
+            <h1 className={'text-center mb-3'}>Buscador de GIFs</h1>
             <AddCategory setCategories={setCategories} />
-            <hr />
 
 
-
-            <ol>
+            <div>
                 {
                     categories.map((category) =>
                         <GifGrid
@@ -27,7 +25,7 @@ export const GifExpertApp = () => {
                         />
                     )
                 }
-            </ol>
+            </div>
         </>
     )
 }

@@ -25,6 +25,7 @@ export const AddCategory = ({setCategories}) => {
                     type="text"
                     value={inputValue}
                     onChange={handleInputChange}
+                    className={'form-control form-control-lg'}
                 />
             </form>
     )
